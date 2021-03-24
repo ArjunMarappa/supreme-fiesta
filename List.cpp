@@ -84,7 +84,6 @@ public:
     /** Delete the index-th node in the linked list, if the index is valid. */
     void deleteAtIndex(int index) {
         if (index > len-1) return;
-        auto cur = head;
         if(len == 1 && index == 0){
             head = NULL;
             len--;
@@ -94,6 +93,7 @@ public:
             len--;
         }
         else if(len >= 2){
+            auto cur = head;
             auto curnxtp1 = head->next->next;
             if(index)
             {
